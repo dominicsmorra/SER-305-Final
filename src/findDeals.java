@@ -61,10 +61,14 @@ public class findDeals {
 	 * and is used to search through dealsea.com and find non-expired items.
 	 * the method returns a linked list with all valid items.
 	 * 
-	 * Time Complexity:
+	 * Time Complexity:O(n*m) where n is the number of elements on the webpage and m is the number of keywords provided by the user.
+	 * Assuming Jsoup returning information takes O(n) time where n is the number of elements on the webpage
+	 * parsing the webpage takes O(n) time because you must go through every element on the page. 
+	 * Every item in the items will be compared to m keywords provided by the user.
 	 * 
-	 * Space Complexity:
-	 *
+	 * Space Complexity: O(n) Where n is the number of elements on the webpage
+	 * In the worst case every element will be considered an item which means that every item will be appended to the foundItems
+	 * linkedlist.
 	 */
 	public static LinkedList grabItems(String[] keywords) {
 		Document doc;
