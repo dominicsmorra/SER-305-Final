@@ -21,9 +21,12 @@ import javax.swing.JOptionPane;
  * The user will provide a list of keywords as well as a frequency (in minutes) to look for new deals.
  * These deals will be displayed to the user in an organized and visually appealing way.
  * 
- * Time Complexity:
+ * Time Complexity: The overall time complexity is O(n*m) where n is the number of elements on the webpage and m is the number of
+ * keywords entered by the user. This is the overall time complexity of the class because of the methods within the class this is the worst complexity.
  * 
- * Space Complexity:
+ * Space Complexity: The space complexity is O(n) where n is the amount of deals. Once the deals are found 
+ * the extra space used, then used to display the deals as well. In the worst case all of the keywords that the user inputs will be 
+ * found causing for the most space possible but still falling under O(n).
  * 
  */
 
@@ -68,7 +71,7 @@ public class findDeals {
 	 * 
 	 * Space Complexity: O(n) Where n is the number of elements on the webpage
 	 * In the worst case every element will be considered an item which means that every item will be appended to the foundItems
-	 * linkedlist.
+	 * linkedlist. 
 	 */
 	public static LinkedList grabItems(String[] keywords) {
 		Document doc;
@@ -100,9 +103,11 @@ public class findDeals {
 	 * The displayItems method will take a linked list and display all items to the user
 	 * in a visually appealing way.
 	 * 
-	 * Time Complexity:
+	 * Time Complexity: O(n) where n is the size of the items linked list. It takes O(n) time to iterate through the 
+	 * list, and all other operations are O(1).
 	 * 
-	 * Space Complexity:
+	 * Space Complexity: O(1) because every extra space used is constant size. At worst the String created is the length of the amount of keywords
+	 * entered by the user, but the String is still O(1) space.
 	 * 
 	 */
 	public static void displayItems(LinkedList items) {
